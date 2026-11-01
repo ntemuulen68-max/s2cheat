@@ -1,6 +1,7 @@
 plugins { id 'com.android.application' }
 android {
     compileSdk 34
+    namespace "com.ollie.s2cheat"
     defaultConfig {
         applicationId "com.ollie.s2cheat"
         minSdk 26
