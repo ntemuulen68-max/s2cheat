@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22)
+project(ollie_s2_full)
+add_library(ollie_s2_full SHARED s2_full.cpp)
+target_compile_options(ollie_s2_full PRIVATE -Wall -O2 -fvisibility=hidden)
+target_link_libraries(ollie_s2_full android log)
