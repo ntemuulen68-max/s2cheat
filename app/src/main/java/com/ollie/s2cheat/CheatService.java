@@ -34,6 +34,12 @@ public class CheatService extends Service {
         buildBtn();
     }
 
+
+    static { System.loadLibrary("ollie_s2_full"); }
+    private native void nativeTick();
+    private native void setFeature(String key, boolean val, float fval);
+    private native float[] getEspData();
+
     private void startForegroundNotif() {
         String CH = "ollie_s2_ch";
         if (android.os.Build.VERSION.SDK_INT >= 26) {
