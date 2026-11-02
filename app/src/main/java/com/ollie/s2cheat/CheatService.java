@@ -120,4 +120,14 @@ public class CheatService extends Service {
         try{if(menuScroll!=null)wm.removeView(menuScroll);}catch(Exception ignored){}
         try{if(espView!=null)wm.removeView(espView);}catch(Exception ignored){}
         try{if(toggleBtn!=null)wm.removeView(toggleBtn);}catch(Exception ignored){}}
+
+    private void startForegroundNotif() {
+        String CH = "ollie_s2";
+        if (android.os.Build.VERSION.SDK_INT >= 26) {
+            android.app.NotificationChannel c = new android.app.NotificationChannel(CH, "S2 Cheat", android.app.NotificationManager.IMPORTANCE_LOW);
+            getSystemService(android.app.NotificationManager.class).createNotificationChannel(c);
+        }
+        startForeground(1337, new android.app.Notification.Builder(this, CH).setContentTitle("olliE S2").setSmallIcon(android.R.drawable.ic_dialog_info).build());
+    }
+
 }
