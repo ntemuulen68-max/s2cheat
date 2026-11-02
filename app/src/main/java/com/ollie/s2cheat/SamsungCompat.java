@@ -8,11 +8,11 @@ public class SamsungCompat {
     public static boolean isSamsung(){
         return Build.MANUFACTURER.equalsIgnoreCase("samsung");
     }
-    public static int getOverlayType(){
+    public static int getOverlayType(android.content.Context ctx){
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
             return WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
         }
-        return WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        return WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
     }
     public static boolean hasOverlayPermission(Context ctx){
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
