@@ -45,7 +45,8 @@ public class CheatService extends Service {
     @Override public IBinder onBind(Intent i){return null;}
     @Override public void onCreate(){
         super.onCreate();
-        startForegroundNotif();wm=(WindowManager)getSystemService(WINDOW_SERVICE);
+        startForegroundNotif();
+        wm=(WindowManager)getSystemService(WINDOW_SERVICE);
         overlayType=SamsungCompat.getOverlayType();
         buildEsp();buildBtn();buildMenu();startTick();}
     private void buildEsp(){
