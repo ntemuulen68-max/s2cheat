@@ -3,6 +3,7 @@
     package="com.ollie.s2cheat">
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
     <application android:label="olliE S2">
         <activity android:name=".PermissionActivity" android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
@@ -13,6 +14,7 @@
         </activity>
         <service android:name=".CheatService"
             android:foregroundServiceType="specialUse"
+            android:exported="false"
             android:exported="false"/>
     </application>
 </manifest>
